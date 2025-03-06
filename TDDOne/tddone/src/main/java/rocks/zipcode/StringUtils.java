@@ -31,9 +31,11 @@ public class StringUtils {
     public static boolean isPalindrome(String str) {
 
         // Your implementation here
-        String reversed = new StringBuilder(str).reverse().toString();
-        String cleanReversed = reversed.replaceAll(",", "").replaceAll(":", "").replaceAll(" ", "").toLowerCase();
-        return cleanReversed.equals(str);
+
+        String regex = ("[\\W]|_ ");
+        String cleanStr = str.replaceAll(regex, "");
+        String cleanReversed = new StringBuilder(cleanStr).reverse().toString();
+        return cleanReversed.equalsIgnoreCase(cleanStr);
         // Note: Ignoring case and non-alphanumeric characters
     }
 }
