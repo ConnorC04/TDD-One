@@ -23,17 +23,21 @@ public class Calculator {
     
     public int multiply(int a, int b) {
         // Your implementation here
-        return 0;
+        return a * b;
     }
     
     public double divide(int a, int b) {
         // Your implementation here
-        return 0.0;
+        if (b == 0){
+            throw new ArithmeticException("Cannot divide by zero");
+        }else{
+            return ((double) (a) / (double) (b));
+        }
     }
     
     public double power(int base, int exponent) {
         // Your implementation here
-        return 0.0;
+        return Math.pow(base, exponent);
     }
 }
 
