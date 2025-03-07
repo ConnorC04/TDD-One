@@ -28,9 +28,9 @@ public class ShoppingCart {
         items.remove(item);
     }
 
-    public Item getItem(int idx){
-        return items.get(idx);
-    }
+//    public Item getItem(int idx){
+//        return items.get(idx);
+//    }
 
     // Item newItem = new Item(...);
     // sc.addItem(newItem);
