@@ -31,6 +31,11 @@ public class ShoppingCart {
     public Item getItem(int idx){
         return items.get(idx);
     }
+
+    // Item newItem = new Item(...);
+    // sc.addItem(newItem);
+    // Item expected = s.getItem(sc.getItemCount()-1);
+     // assertEqual(expected, newItem);
     
     public int getItemCount() {
         return items.size();
