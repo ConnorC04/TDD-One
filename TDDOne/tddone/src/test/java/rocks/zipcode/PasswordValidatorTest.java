@@ -29,7 +29,7 @@ public class PasswordValidatorTest {
         assertFalse(validator.isValid(("12345")));
         assertFalse(validator.isValid("ALLUPPERCASE"));
         assertFalse(validator.isValid("alllowercase"));
-        assertFalse(validator.isValid("thispasswordiswaytoolongandwontworkinthisapplicationsotryagainkris"));
+        assertFalse(validator.isValid("thispasswordisWAYT00LONG!andwontworkinthisapplicationsotryagainkris"));
         assertFalse(validator.isValid(""));
         assertFalse(validator.isValid("!!!???---+++==="));
     }

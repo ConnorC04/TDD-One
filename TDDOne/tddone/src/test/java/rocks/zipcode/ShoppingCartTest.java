@@ -2,6 +2,7 @@ package rocks.zipcode;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
+import java.awt.*;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,15 +15,25 @@ class ShoppingCartTest {
     // Make sure to test all functionality including:
 
     private double taxRate;
-    private List<ShoppingCart.Item> items;
-    private final ShoppingCart shoppingCart = new ShoppingCart(taxRate);
+    private double price;
+    private String name;
+    private int quantity;
+    private List<ShoppingCart.Item> ItemList;
+    private ShoppingCart shoppingCart;
+    private ShoppingCart.Item newItem;
+
+    public void setUp(){
+        this.shoppingCart = new ShoppingCart(taxRate);
+        this.newItem = new ShoppingCart.Item(name, price, quantity);
+    }
+
+    @Test
+    public void testAddItem(){
+        setUp();
+        assertArrayEquals(shoppingCart.addItem(newItem), newItem);
+    }
 
 
-//    @Test
-//    public void addItems(){
-//        List<ShoppingCart.Item> actual;
-//        actual.add(Item apples);
-//     }
     // - Adding and removing items
     // - Calculating subtotal, tax, and total
     // - Edge cases like an empty cart
