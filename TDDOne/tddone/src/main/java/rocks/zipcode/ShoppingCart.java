@@ -27,6 +27,10 @@ public class ShoppingCart {
     public void removeItem(Item item) {
         items.remove(item);
     }
+
+    public Item getItem(int idx){
+        return items.get(idx);
+    }
     
     public int getItemCount() {
         return items.size();

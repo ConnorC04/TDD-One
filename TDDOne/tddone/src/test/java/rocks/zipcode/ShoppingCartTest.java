@@ -30,7 +30,7 @@ class ShoppingCartTest {
     @Test
     public void testAddItem(){
         setUp();
-        assertArrayEquals(shoppingCart.addItem(newItem), newItem);
+        assertArrayEquals(shoppingCart.addItem(newItem));
     }
 
 
